@@ -3,7 +3,6 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<Authors>CosineG</Authors>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Title>OpenCC.NET</Title>
 		<Version>1.0.2</Version>
 		<PackageProjectUrl>https://github.com/CosineG/OpenCC.NET</PackageProjectUrl>
@@ -12,14 +11,17 @@
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<Content Include="Dictionary\*.txt">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 			<Pack>True</Pack>
 			<PackageCopyToOutput>True</PackageCopyToOutput>
 		</Content>
 		<Content Include="JiebaResource\*.*">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 			<Pack>True</Pack>
 			<PackageCopyToOutput>True</PackageCopyToOutput>
 		</Content>
